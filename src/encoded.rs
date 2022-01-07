@@ -26,3 +26,8 @@ impl<E: Encoder> std::fmt::Display for Encoded<E> {
 		write!(f, "{}", self.inner)
 	}
 }
+impl<E: Encoder> std::fmt::Debug for Encoded<E> {
+	fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+		write!(f, "{:?}", self.inner)
+	}
+}

@@ -11,3 +11,4 @@ serde = { version = "1.0.133", features = ["derive"] }
 
 [dev-dependencies]
 csv = "1.1.6"
+serde_json = "1.0.74"
