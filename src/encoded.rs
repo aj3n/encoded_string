@@ -22,12 +22,14 @@ impl<E: Encoder> From<String> for Encoded<E> {
 }
 
 impl<E: Encoder> std::fmt::Display for Encoded<E> {
+	#[inline]
 	fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-		write!(f, "{}", self.inner)
+		std::fmt::Display::fmt(&self.inner, f)
 	}
 }
 impl<E: Encoder> std::fmt::Debug for Encoded<E> {
+	#[inline]
 	fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-		write!(f, "{:?}", self.inner)
+		std::fmt::Debug::fmt(&self.inner, f)
 	}
 }

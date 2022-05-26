@@ -5,7 +5,7 @@ use serde::Deserialize;
 static CASE1_CSV: &[u8] = include_bytes!("../testcase/case1.csv");
 static CASE1_JSON: &[u8] = include_bytes!("../testcase/case1.json");
 
-#[derive(Debug,Deserialize)]
+#[derive(Debug, Deserialize)]
 struct StructCase1 {
 	name: Encoded<Gbk>,
 	age: i32,
